@@ -1,0 +1,95 @@
+.listContainer {
+  height: 100%;
+  width: calc(100% - 60px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+.listContainer.open {
+  transform: translateX(0);
+}
+
+.hamburger {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 40%;
+  border: 2px solid #253237;
+  border-radius: 50%;
+}
+
+.search {
+  height: 60px;
+  border: none;
+  padding: 0 20px;
+  color: #253237;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #eee;
+}
+
+.country {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.listButton {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.listIndicator {
+  float: right;
+}
+
+.flag {
+  vertical-align: bottom;
+  margin-right: 6px;
+}
+
+.listInner {
+  padding: 0 20px 0 20px;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}

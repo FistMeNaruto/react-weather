@@ -1,0 +1,26 @@
+.city {
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.heart {
+  width: 24px;
+  margin-right: 6px;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+
+.heart {
+  stroke: #253237;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.heart.active {
+  fill: #f44336;
+  stroke: #f44336;  
+}
+
+.cityName {
+  cursor: pointer;
+}
